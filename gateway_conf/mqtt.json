@@ -3,7 +3,7 @@
     "name": "Default Local Broker",
     "host": "192.168.110.20",
     "port": 1883,
-    "clientId": "A020415a",
+    "clientId": "",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,
