@@ -5,6 +5,11 @@ import json
 import paramiko
 import os
 
+# Parse command-line arguments
+parser = argparse.ArgumentParser(description='This script aims to automate the installation and configuration of the Thingsboard IoT Gateway platform on multiple devices at once.')
+parser.add_argument('action', choices=['deploy', 'update'], help='Choose whether to deploy or update Thingsboard IoT')
+args = parser.parse_args()
+
 # Importing models and REST client class from Community Edition version
 from tb_rest_client.rest_client_ce import *
 from tb_rest_client.rest import ApiException
@@ -14,11 +19,6 @@ gt_user = 'root'
 gt_password = '12345678'
 tb_url = 'http://192.168.110.20:8080'
 remote_config_directory = '/etc/thingsboard-gateway/config/'
-
-# Parse command-line arguments
-parser = argparse.ArgumentParser(description='This script aims to automate the installation and configuration of the Thingsboard IoT Gateway platform on multiple devices at once.')
-parser.add_argument('action', choices=['deploy', 'update'], help='Choose whether to deploy or update Thingsboard IoT')
-args = parser.parse_args()
 
 if args.action == "deploy":
     # Deploy commands
