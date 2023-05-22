@@ -1,4 +1,4 @@
-# Thingsboard IoT Gateway Deployment Script
+# Thingsboard IoT Deployment Script
 
 This project aims to automate the installation and configuration of the Thingsboard IoT Gateway platform on multiple devices at once.
 
